@@ -1,16 +1,19 @@
 ---
+import { Image } from 'astro:assets';
+import heroDog from '../assets/hero-dog.png';
 ---
 
 <section class="relative min-h-[85vh] py-20 flex items-center justify-center overflow-hidden">
   <!-- Dynamic Background with Overlay -->
   <div class="absolute inset-0 z-0">
     <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40 z-10"></div>
-    <!-- Placeholder image - using a nice pet image if available, else a solid color fallback until replaced -->
-    <img 
-      src="/img/hero-dog.png" 
+    <!-- Optimized Image via Astro Assets -->
+    <Image 
+      src={heroDog} 
       alt="Cachorro feliz" 
       class="w-full h-full object-cover object-center"
       loading="eager"
+      fetchpriority="high"
     />
   </div>
 
