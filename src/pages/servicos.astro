@@ -8,21 +8,24 @@ const servicesList = [
     title: "Banho & Tosa",
     icon: "🚿",
     description: "Um spa completo para o seu pet. Utilizamos apenas produtos de linha premium, toalhas esterilizadas individualmente e secadores silenciosos.",
-    features: ["Banho relaxante", "Tosa na tesoura", "Tosa higiênica", "Hidratação profunda", "Corte de unhas"]
+    features: ["Banho relaxante", "Tosa na tesoura", "Tosa higiênica", "Hidratação profunda", "Corte de unhas"],
+    whatsapp: "https://api.whatsapp.com/send?phone=553134631877"
   },
   {
     id: "veterinaria",
     title: "Clínica Veterinária",
     icon: "🩺",
     description: "Saúde em primeiro lugar. Nossa clínica conta com equipamentos modernos e profissionais apaixonados pelo que fazem.",
-    features: ["Consultas de rotina", "Vacinação importada", "Exames laboratoriais", "Microchipagem", "Orientação nutricional"]
+    features: ["Consultas de rotina", "Vacinação importada", "Exames laboratoriais", "Microchipagem", "Orientação nutricional"],
+    whatsapp: "https://api.whatsapp.com/send?phone=5531981099233"
   },
   {
     id: "petshop",
     title: "Pet Shop & Farmácia",
     icon: "🦴",
     description: "Tudo o que seu pet precisa. Trabalhamos com as melhores marcas de ração, petiscos naturais e farmácia completa.",
-    features: ["Rações Super Premium", "Farmácia veterinária", "Brinquedos interativos", "Camas e roupas", "Acessórios de passeio"]
+    features: ["Rações Super Premium", "Farmácia veterinária", "Brinquedos interativos", "Camas e roupas", "Acessórios de passeio"],
+    whatsapp: "https://wa.me/553134683299"
   }
 ];
 ---
@@ -59,7 +62,11 @@ const servicesList = [
                 ))}
               </ul>
               <div class="pt-4">
-                 <a href="https://wa.me/5531999999999" class="text-primary font-bold hover:text-accent border-b-2 border-primary hover:border-accent transition-colors pb-1">
+                 <a 
+                   href={service.whatsapp} 
+                   target="_blank"
+                   class="text-primary font-bold hover:text-accent border-b-2 border-primary hover:border-accent transition-colors pb-1"
+                 >
                    Agendar {service.title} &rarr;
                  </a>
               </div>
