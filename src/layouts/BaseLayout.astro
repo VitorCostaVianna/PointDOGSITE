@@ -1,0 +1,93 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Point Dog Pet Shop - Banho, Tosa e Clínica Veterinária em Belo Horizonte." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/img/logo-pointdog.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="flex flex-col min-h-screen text-text-main bg-background">
+    <Header />
+    
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <!-- Sticky WhatsApp Button -->
+    <a 
+      href="https://wa.me/5531999999999" 
+      target="_blank" 
+      class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center animate-bounce-slow"
+      aria-label="Falar no WhatsApp"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-3.104-5.391-.233-12.83 5.304-14.73C13.529.213 20.358 4.293 21.657 9.87c1.334 5.722-1.2 12.062-6.505 14.15l-4.223.863L5.45 22.87l-2.03-3.61L.057 24zm4.276-8.24c-.218.423-.42.852-.613 1.28L2.2 21.8l5.225-1.42c.44-.199.886-.403 1.332-.617.202-.097.404-.195.606-.293l.386.671c2.193 3.795 7.07 4.234 10.375 2.15 3.33-2.095 4.885-6.526 3.42-10.156-1.503-3.719-5.932-5.46-9.526-3.78C9.579 10.584 7.64 15.343 4.333 15.76z"/></svg>
+    </a>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Point Dog Pet Shop",
+        "image": "https://pointdog.com.br/img/logo-pointdog.png",
+        "telephone": "553134661234",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Mármore, 123 - Santa Tereza",
+          "addressLocality": "Belo Horizonte",
+          "addressRegion": "MG",
+          "postalCode": "31010-000",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -19.924294,
+          "longitude": -43.925432
+        },
+        "url": "https://pointdog.com.br",
+        "priceRange": "$$",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "08:00",
+            "closes": "17:00"
+          }
+        ]
+      }
+    </script>
+  </body>
+</html>

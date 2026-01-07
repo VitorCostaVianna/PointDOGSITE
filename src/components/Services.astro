@@ -1,0 +1,64 @@
+---
+const services = [
+  {
+    title: "Banho & Tosa Profissional",
+    description: "Estética animal com produtos premium e profissionais carinhosos. Acompanhe tudo por vídeo se desejar.",
+    icon: "🚿",
+    link: "/servicos#banho-tosa"
+  },
+  {
+    title: "Clínica Veterinária",
+    description: "Consultas, vacinas e exames com quem entende. Saúde preventiva para garantir a longevidade do seu melhor amigo.",
+    icon: "🩺",
+    link: "/servicos#veterinaria"
+  },
+  {
+    title: "Pet Shop Completo",
+    description: "Rações super premium, brinquedos interativos e acessórios exclusivos. Tudo o que seu pet ama em um só lugar.",
+    icon: "🦴",
+    link: "/servicos#petshop"
+  }
+];
+---
+
+<section id="servicos" class="py-20 bg-background">
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">Tudo para o seu pet</h2>
+      <p class="text-lg text-gray-600">
+        Reunimos os melhores serviços e produtos em um ambiente pensado para o bem-estar animal.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {services.map((service, index) => (
+        <div class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-accent/30 relative overflow-hidden">
+          <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity text-9xl select-none">
+            {service.icon}
+          </div>
+          
+          <div class="relative z-10">
+            <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              {service.icon}
+            </div>
+            
+            <h3 class="text-2xl font-serif font-bold text-gray-800 mb-4 group-hover:text-primary transition-colors">
+              {service.title}
+            </h3>
+            
+            <p class="text-gray-600 leading-relaxed mb-6">
+              {service.description}
+            </p>
+            
+            <a href={service.link} class="inline-flex items-center text-primary font-semibold hover:text-accent transition-colors">
+              Saiba mais 
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

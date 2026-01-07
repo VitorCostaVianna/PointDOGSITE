@@ -1,0 +1,164 @@
+.contato ul li {
+    font-size: 2em;
+}
+.contato h1 {
+    font-size: 2.5em;
+}
+header p {
+    padding-bottom: 15px;
+}
+img {
+    border-radius: 8px;
+    
+}
+.informacao h2 {
+    text-align: center;
+}
+.informacao img {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.vet img {
+    margin-top: 10px;
+}
+.vet p {
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 5px;
+}
+.banho img {
+    margin-top: 10px;
+}
+.banho p {
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 5px;
+}
+.informacao p {
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 5px;
+}
+.produtos img {
+    margin-top: 10px;
+}
+.produtos p {
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 5px;
+}
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+.title {
+    font-size: 2em;
+}
+.banho {
+    text-align: center;
+}
+.vet {
+    text-align: center;
+}
+.produtos {
+    text-align: center;
+}
+main h2 {
+    font-size: 1.7em;
+}
+.produtos ul li {
+    background-color:white;
+    text-align: center;
+}
+.cards div {
+    padding: 10px;
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid #F68C3F;
+    padding: 10px;
+    background-color: #F2F2F2;
+}
+.apresent {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.info {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 16px;
+}
+.todasinfo div {
+    padding: 5px;
+}
+.todasinfo p {
+    font-size: 1.3em;
+}
+.todasinfo a {
+    font-size: 1.3em;
+}
+.todasinfo {
+    margin-top: 25px;
+}
+.fotos {
+    display: flex;
+    justify-content: space-evenly;
+}
+.endereco {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.endereco p {
+    font-size: 1.2em;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+.endereco div {
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+@media all and (max-width: 758px) {
+
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        display: grid;
+        grid: "header" 1fr
+            "aside" 
+            "main"
+            "footer";
+    }
+    img {
+        width: 100%;
+    }
+    header {
+        width: 100%;
+    }
+    .fotos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .apresent {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .endereco {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .cards {
+        display: block;
+    }
+    .cards div {
+        margin: 10px;
+    }
+    .informacao img {
+        width: 100%;
+        display: none;
+    }
+}

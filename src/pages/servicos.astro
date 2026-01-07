@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Location from '../components/Location.astro';
+
+const servicesList = [
+  {
+    id: "banho-tosa",
+    title: "Banho & Tosa",
+    icon: "🚿",
+    description: "Um spa completo para o seu pet. Utilizamos apenas produtos de linha premium, toalhas esterilizadas individualmente e secadores silenciosos.",
+    features: ["Banho relaxante", "Tosa na tesoura", "Tosa higiênica", "Hidratação profunda", "Corte de unhas"]
+  },
+  {
+    id: "veterinaria",
+    title: "Clínica Veterinária",
+    icon: "🩺",
+    description: "Saúde em primeiro lugar. Nossa clínica conta com equipamentos modernos e profissionais apaixonados pelo que fazem.",
+    features: ["Consultas de rotina", "Vacinação importada", "Exames laboratoriais", "Microchipagem", "Orientação nutricional"]
+  },
+  {
+    id: "petshop",
+    title: "Pet Shop & Farmácia",
+    icon: "🦴",
+    description: "Tudo o que seu pet precisa. Trabalhamos com as melhores marcas de ração, petiscos naturais e farmácia completa.",
+    features: ["Rações Super Premium", "Farmácia veterinária", "Brinquedos interativos", "Camas e roupas", "Acessórios de passeio"]
+  }
+];
+---
+
+<BaseLayout title="Nossos Serviços | Point Dog Pet Shop" description="Conheça nossos serviços de Banho e Tosa, Clínica Veterinária e Pet Shop completo em BH.">
+  
+  <section class="bg-primary py-16 text-center text-white">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Nossos Serviços</h1>
+      <p class="text-green-100 max-w-2xl mx-auto text-lg">Excelência e carinho em cada detalhe. Do banho refrescante à saúde preventiva.</p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-background">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="space-y-24">
+        {servicesList.map((service, index) => (
+          <div id={service.id} class={`flex flex-col md:flex-row items-center gap-12 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+            
+            <div class="flex-1 space-y-6">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-4xl mb-4">
+                {service.icon}
+              </div>
+              <h2 class="text-3xl font-serif font-bold text-primary">{service.title}</h2>
+              <p class="text-lg text-gray-700 leading-relaxed">
+                {service.description}
+              </p>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                {service.features.map(feature => (
+                  <li class="flex items-center gap-2 text-gray-600">
+                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <div class="pt-4">
+                 <a href="https://wa.me/5531999999999" class="text-primary font-bold hover:text-accent border-b-2 border-primary hover:border-accent transition-colors pb-1">
+                   Agendar {service.title} &rarr;
+                 </a>
+              </div>
+            </div>
+
+            <div class="flex-1 w-full relative">
+                <div class="aspect-video bg-gray-200 rounded-3xl overflow-hidden shadow-lg border-4 border-white transform hover:scale-[1.02] transition-transform duration-500">
+                    <!-- Placeholder based on service type -->
+                    <div class="w-full h-full flex items-center justify-center bg-gray-100 text-gray-400">
+                        {service.id === 'banho-tosa' && <span class="text-6xl">🛁</span>}
+                        {service.id === 'veterinaria' && <span class="text-6xl">🐕‍🦺</span>}
+                        {service.id === 'petshop' && <span class="text-6xl">🎾</span>}
+                    </div>
+                </div>
+            </div>
+
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <Location />
+
+</BaseLayout>

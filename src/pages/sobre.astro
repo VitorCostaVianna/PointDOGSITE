@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Location from '../components/Location.astro';
+---
+
+<BaseLayout title="Sobre Nós | Point Dog Pet Shop" description="Conheça a história da Point Dog Pet Shop e nossa paixão por animais.">
+  
+  <section class="bg-secondary/30 py-16 text-center">
+    <div class="container mx-auto px-4">
+      <span class="text-accent font-medium tracking-wider uppercase mb-2 block">Nossa História</span>
+      <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4 text-primary">Paixão por animais, <br/>compromisso com você</h1>
+    </div>
+  </section>
+
+  <section class="py-20 bg-background">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        
+        <div class="relative order-2 md:order-1">
+           <div class="aspect-[4/5] bg-gray-200 rounded-3xl overflow-hidden shadow-xl rotate-2 hover:rotate-0 transition-all duration-500">
+               <img src="/img/NancyAntiga.svg" alt="Fundadora com cachorro" class="w-full h-full object-cover" />
+           </div>
+           <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-lg max-w-xs hidden md:block">
+               <p class="font-serif italic text-xl text-primary">"Cuidar é a nossa forma de amar."</p>
+           </div>
+        </div>
+
+        <div class="space-y-6 order-1 md:order-2">
+           <h2 class="text-3xl font-bold font-serif text-primary">Mais que um Pet Shop, uma família.</h2>
+           <p class="text-lg text-gray-700 leading-relaxed">
+             A Point Dog nasceu do sonho de oferecer um atendimento verdadeiramente diferenciado em Belo Horizonte. Cansados de lugares onde o banho era apenas "limpeza", decidimos criar um espaço onde o bem-estar emocional do pet vem em primeiro lugar.
+           </p>
+           <p class="text-lg text-gray-700 leading-relaxed">
+             Aqui, cada animal é tratado pelo nome, com suas manias e preferências respeitadas. Nossa equipe é treinada não apenas tecnicamente, mas para entender a linguagem corporal e as necessidades de cada bichinho.
+           </p>
+           
+           <div class="grid grid-cols-2 gap-6 mt-8">
+               <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                   <span class="text-3xl mb-2 block">🤝</span>
+                   <h3 class="font-bold text-gray-800">Confiança</h3>
+                   <p class="text-sm text-gray-600">Transparência total em todos os procedimentos.</p>
+               </div>
+               <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                   <span class="text-3xl mb-2 block">❤️</span>
+                   <h3 class="font-bold text-gray-800">Carinho</h3>
+                   <p class="text-sm text-gray-600">Amor incondicional em cada gesto.</p>
+               </div>
+           </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+  <Location />
+
+</BaseLayout>

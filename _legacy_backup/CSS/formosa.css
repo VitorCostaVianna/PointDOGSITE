@@ -1,0 +1,99 @@
+.contato ul li {
+    font-size: 2em;
+}
+.contato h1 {
+    font-size: 2.5em;
+}
+header p {
+    padding-bottom: 15px;
+}
+
+.imagens {
+    display: flex;
+    justify-content: space-evenly;
+}
+img {
+    border-radius: 8px;
+}
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.informacao h2 {
+    text-align: center;
+}
+.informacao img {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.vet img {
+    margin-top: 10px;
+}
+.vet p {
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 5px;
+}
+.banho img {
+    margin-top: 10px;
+}
+.banho p {
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 5px;
+}
+.informacao p {
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 5px;
+}
+.produtos img {
+    margin-top: 10px;
+}
+.produtos p {
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 5px;
+}
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+.title {
+    font-size: 2em;
+}
+.banho {
+    text-align: center;
+}
+.vet {
+    text-align: center;
+}
+.produtos {
+    text-align: center;
+}
+main h2 {
+    font-size: 1.7em;
+}
+.endereco {
+    display: flex;
+    justify-content: space-around;
+}
+.endereco p {
+    font-size: 1.2em;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+.endereco div {
+
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 10px;
+}
